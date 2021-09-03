@@ -23,14 +23,11 @@ module.exports = {
               }
               return rules;
             })
-          }
+          };
         }
         
         return item;
       });
-
-
-      console.log(JSON.stringify(webpackConfig.module.rules, null, 4));
 
       return webpackConfig;
     }
