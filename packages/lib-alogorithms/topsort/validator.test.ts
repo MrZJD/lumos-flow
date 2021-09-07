@@ -1,6 +1,7 @@
 import { validateDependency, IGraphNode } from './index';
 import { union } from 'lib-utils/array';
 
+// 把依赖表=>转为图
 function depMap2treeMap(dependencies: Record<string, string[]>) {
   const nodeMap: Record<string, IGraphNode> = {};
 
@@ -37,7 +38,7 @@ function depMap2treeMap(dependencies: Record<string, string[]>) {
     });
   });
 
-  return nodeMap;
+  return Object.values(nodeMap);
 }
 
 // 没有循环依赖
@@ -54,188 +55,105 @@ const case1 = depMap2treeMap({
   ]
 });
 
-const case2 = {
-  'psm.name.atce_service': [
-    {
-      name: 'psm.name.b',
-      type: 'tce_service'
-    }
+const case2 = depMap2treeMap({
+  'tce-a': [
+    'tce-b'
   ],
-  'psm.name.btce_service': [
-    {
-      name: 'psm.name.c',
-      type: 'tce_service'
-    }
+  'tce-b': [
+    'tce-c'
   ],
-  'psm.name.ctce_service': [
-    {
-      name: 'psm.name.a',
-      type: 'tce_service'
-    }
+  'tce-c': [
+    'tce-a'
   ],
-};
+});
 
 // 单个依赖
-const case3 = {
-  'psm.name.atce_service': [
-    {
-      name: 'psm.name.b',
-      type: 'tce_service'
-    }
+const case3 = depMap2treeMap({
+  'tce-a': [
+    'tce-b'
   ],
-  'psm.name.btce_service': [
-    {
-      name: 'psm.name.c',
-      type: 'tce_service'
-    }
+  'tce-b': [
+    'tce-c'
   ],
-  'psm.name.ctce_service': [
-    // {
-    //   name: 'psm.name.a',
-    //   type: 'tce_service'
-    // }
-  ],
-};
+  'tce-c': [],
+});
 
-const case4 = {
-  'psm.name.atce_service': [
-    {
-      name: 'psm.name.b',
-      type: 'tce_service'
-    },
-    {
-      name: 'psm.name.c',
-      type: 'tce_service'
-    }
+const case4 = depMap2treeMap({
+  'tce-a': [
+    'tce-b',
+    'tce-c'
   ],
-  'psm.name.btce_service': [
-    {
-      name: 'psm.name.d',
-      type: 'tce_service'
-    }
+  'tce-b': [
+    'tce-d'
   ],
-  'psm.name.ctce_service': [
-    {
-      name: 'psm.name.d',
-      type: 'tce_service'
-    }
+  'tce-c': [
+    'tce-d'
   ],
-};
+});
 
-const case5 = {
-  'psm.name.atce_service': [
-    {
-      name: 'psm.name.b',
-      type: 'tce_service'
-    },
-    {
-      name: 'psm.name.c',
-      type: 'tce_service'
-    }
+const case5 = depMap2treeMap({
+  'tce-a': [
+    'tce-b',
+    'tce-c'
   ],
-  'psm.name.btce_service': [
-    {
-      name: 'psm.name.d',
-      type: 'tce_service'
-    }
+  'tce-b': [
+    'tce-d'
   ],
-  'psm.name.ctce_service': [
-    {
-      name: 'psm.name.d',
-      type: 'tce_service'
-    }
+  'tce-c': [
+    'tce-d'
   ],
-  'psm.name.dtce_service': [
-    {
-      name: 'psm.name.c',
-      type: 'tce_service'
-    }
+  'tce-d': [
+    'tce-c'
   ],
-};
+});
 
 // 没有循环依赖
-const case6 = {
-  'psm.name.atce_service': [
-    {
-      name: 'psm.name.b',
-      type: 'tce_service'
-    },
-    {
-      name: 'psm.name.c',
-      type: 'tce_service'
-    }
+const case6 = depMap2treeMap({
+  'tce-a': [
+    'tce-b',
+    'tce-c'
   ],
-  'psm.name.btce_service': [
-    {
-      name: 'psm.name.c',
-      type: 'tce_service'
-    }
+  'tce-b': [
+    'tce-c'
   ]
-};
+});
 
 // 有循环依赖
-const case7 = {
-  'psm.name.atce_service': [
-    {
-      name: 'psm.name.b',
-      type: 'tce_service'
-    }
+const case7 = depMap2treeMap({
+  'tce-a': [
+    'tce-b'
   ],
-  'psm.name.btce_service': [
-    {
-      name: 'psm.name.c',
-      type: 'tce_service'
-    }
+  'tce-b': [
+    'tce-c'
   ],
-  'psm.name.ctce_service': [
-    {
-      name: 'psm.name.m',
-      type: 'tce_service'
-    }
+  'tce-c': [
+    'tce-m'
   ],
-  'psm.name.mtce_service': [
-    {
-      name: 'psm.name.b',
-      type: 'tce_service'
-    }
+  'tce-m': [
+    'tce-b'
   ],
-  'psm.name.ftce_service': [
-    {
-      name: 'psm.name.e',
-      type: 'tce_service'
-    }
+  'tce-f': [
+    'tce-e'
   ]
-};
+});
 
-const case8 = {
-  'psm.name.btce_service': [
-    {
-      name: 'psm.name.c',
-      type: 'tce_service'
-    }
+const case8 = depMap2treeMap({
+  'tce-b': [
+    'tce-c'
   ],
-  'psm.name.ctce_service': [
-    {
-      name: 'psm.name.b',
-      type: 'tce_service'
-    }
+  'tce-c': [
+    'tce-b'
   ]
-};
+});
 
-const case9 = {
-  'psm.name.atce_service': [
-    {
-      name: 'psm.name.b',
-      type: 'tce_service'
-    }
+const case9 = depMap2treeMap({
+  'tce-a': [
+    'tce-b'
   ],
-  'psm.name.ctce_service': [
-    {
-      name: 'psm.name.d',
-      type: 'tce_service'
-    }
+  'tce-c': [
+    'tce-d'
   ]
-};
+});
 
 
 export function main() {
@@ -249,3 +167,5 @@ export function main() {
   console.assert(validateDependency(case8)[0] === false);
   console.assert(validateDependency(case9)[0] === true);
 }
+
+main();

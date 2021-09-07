@@ -19,7 +19,10 @@ export const FlexBox: React.FC<IFlexBoxProps> = ({
   children
 }) => {
   return (
-    <div className={cx(['lib-flbox', className], {'lib-flbox-inline': inline})} style={{ alignItems: align, justifyContent: justify }}>
+    <div
+      className={cx(['lib-flbox', className], {'lib-flbox-inline': inline})}
+      style={{ alignItems: align, justifyContent: justify }}
+    >
       {children}
     </div>
   );
