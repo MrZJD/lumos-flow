@@ -1,0 +1,10 @@
+.lib-flbox {
+  display: flex;
+  // 下面为默认值
+  align-items: center;
+  justify-content: space-between;
+}
+
+.lib-flbox-inline {
+  display: inline-flex;
+}

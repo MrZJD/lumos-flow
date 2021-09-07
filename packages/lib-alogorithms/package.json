@@ -1,8 +1,7 @@
 {
-  "name": "lib-components",
+  "name": "lib-alogorithms",
   "version": "1.0.0",
-  "description": "公共componnets",
-  "main": "index.ts",
+  "main": "index.js",
   "license": "MIT",
   "dependencies": {
     "lib-utils": "1.0.0"
