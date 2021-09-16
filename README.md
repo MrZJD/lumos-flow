@@ -7,7 +7,7 @@ yarn workspace app-a start # dev
 或者进入项目中执行
 
 ```bash
-cd ./packages/app-a/
+cd ./packages/app-admin/
 yarn start
 ```
 
