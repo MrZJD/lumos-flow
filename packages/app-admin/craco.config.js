@@ -3,6 +3,16 @@ const path = require('path');
 const pathResolve = pathUrl => path.join(__dirname, pathUrl);
 
 module.exports = {
+  style: {
+    modules: {
+      localIdentName: '[local]___[hash:base64:5]'
+    },
+  },
+  scss: {
+    loaderOptions: {
+      implementation: require('sass')
+    },
+  },
   webpack: {
     alias: {
       '@': pathResolve('src'), // 配置@ （同时还要配置tsconfig，如下）

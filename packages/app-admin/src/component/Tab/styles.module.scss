@@ -1,0 +1,23 @@
+.tabHeader {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #eaeaea;
+  padding: 0 12px;
+
+  .tabItem {
+    margin: 0 4px -2px;
+    padding: 12px;
+    color: #4e5969;
+    cursor: pointer;
+    border-bottom: 2px solid transparent;
+
+    &.active {
+      color: #165dff;
+      border-bottom: 2px solid #165dff;
+    }
+
+    &:hover {
+      background-color: #efefef;
+    }
+  }
+}
