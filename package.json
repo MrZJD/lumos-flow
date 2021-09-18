@@ -19,7 +19,19 @@
   "devDependencies": {
     "@commitlint/cli": "^13.1.0",
     "@commitlint/config-conventional": "^13.1.0",
+    "@typescript-eslint/eslint-plugin": "^4.31.1",
+    "@typescript-eslint/parser": "^4.31.1",
+    "eslint": "^7.32.0",
+    "eslint-config-google": "^0.14.0",
+    "eslint-plugin-react": "^7.25.2",
     "husky": "^7.0.2",
+    "lint-staged": "^11.1.2",
     "sass": "^1.40.0"
+  },
+  "lint-staged": {
+    "./packages/**/*.{ts,js,tsx,jsx}": [
+      "./node_modules/.bin/eslint",
+      "git add"
+    ]
   }
 }
