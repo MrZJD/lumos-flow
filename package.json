@@ -9,18 +9,17 @@
   "workspaces": [
     "packages/*"
   ],
+  "scripts": {
+    "prepare": "husky install"
+  },
   "dependencies": {
-    "@commitlint/cli": "^13.1.0",
     "@craco/craco": "^6.2.0",
     "hox": "^1.1.4"
   },
   "devDependencies": {
+    "@commitlint/cli": "^13.1.0",
+    "@commitlint/config-conventional": "^13.1.0",
     "husky": "^7.0.2",
     "sass": "^1.40.0"
-  },
-  "husky": {
-    "hooks": {
-      "commit-msg": "commitlint .commitlintrc.js -E HUSKY_GIT_PARAMS"
-    }
   }
 }
