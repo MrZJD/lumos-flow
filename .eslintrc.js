@@ -20,6 +20,13 @@ module.exports = {
         "@typescript-eslint"
     ],
     "rules": {
-        "indent": ["error", 2]
+        "indent": ["error", 2],
+        "object-curly-spacing": ["off"],
+        "semi": ["warn"],
+        "no-unused-vars": ["warn"],
+        "require-jsdoc": ["off"],
+        "comma-dangle": ["off"],
+        "max-len": ["off"],
+        "no-invalid-this": ["warn"]
     }
 };

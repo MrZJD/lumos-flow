@@ -2658,6 +2658,11 @@ alphanum-sort@^1.0.0:
   resolved "http://bnpm.byted.org/alphanum-sort/-/alphanum-sort-1.0.2.tgz#97a1119649b211ad33691d9f9f486a8ec9fbe0a3"
   integrity sha1-l6ERlkmyEa0zaR2fn0hqjsn74KM=
 
+amdefine@>=0.0.4:
+  version "1.0.1"
+  resolved "http://bnpm.byted.org/amdefine/-/amdefine-1.0.1.tgz#4a5282ac164729e93619bcfd3ad151f817ce91f5"
+  integrity sha1-SlKCrBZHKek2Gbz9OtFR+BfOkfU=
+
 ansi-colors@^3.0.0:
   version "3.2.4"
   resolved "http://bnpm.byted.org/ansi-colors/-/ansi-colors-3.2.4.tgz#e3a3da4bfbae6c86a9c285625de124a234026fbf"
@@ -3561,7 +3566,7 @@ case-sensitive-paths-webpack-plugin@2.3.0:
   resolved "http://bnpm.byted.org/case-sensitive-paths-webpack-plugin/-/case-sensitive-paths-webpack-plugin-2.3.0.tgz#23ac613cc9a856e4f88ff8bb73bbb5e989825cf7"
   integrity sha1-I6xhPMmoVuT4j/i7c7u16YmCXPc=
 
-chalk@2.4.2, chalk@^2.0.0, chalk@^2.4.1, chalk@^2.4.2:
+chalk@2.4.2, chalk@^2.0.0, chalk@^2.3.2, chalk@^2.4.1, chalk@^2.4.2:
   version "2.4.2"
   resolved "http://bnpm.byted.org/chalk/-/chalk-2.4.2.tgz#cd42541677a54333cf541a49108c1432b44c9424"
   integrity sha512-Mti+f9lpJNcwF4tWV8/OrTTtF1gZi+f8FqlyAdouralcFWFQWF2+NgCHShjkCb+IFBLq9buZwE1xckQU4peSuQ==
@@ -3820,7 +3825,7 @@ combined-stream@^1.0.8:
   dependencies:
     delayed-stream "~1.0.0"
 
-commander@^2.20.0:
+commander@^2.15.1, commander@^2.20.0:
   version "2.20.3"
   resolved "http://bnpm.byted.org/commander/-/commander-2.20.3.tgz#fd485e84c03eb4881c20722ba48035e8531aeb33"
   integrity sha512-GpVkmM8vF2vQUkj2LvZmD35JxeJOLCwJ9cUkugyk2nuhbv3+mJvpLYYt+0+USMxE+oj+ey/lJEnhZw75x/OMcQ==
@@ -3899,6 +3904,11 @@ concat-stream@^1.5.0:
     inherits "^2.0.3"
     readable-stream "^2.2.2"
     typedarray "^0.0.6"
+
+concat-typed-array@^1.0.2:
+  version "1.0.2"
+  resolved "http://bnpm.byted.org/concat-typed-array/-/concat-typed-array-1.0.2.tgz#67880c3ce19ecff110c31598b41c7f4739d47ca0"
+  integrity sha1-Z4gMPOGez/EQwxWYtBx/RznUfKA=
 
 confusing-browser-globals@^1.0.10:
   version "1.0.10"
@@ -4404,6 +4414,13 @@ damerau-levenshtein@^1.0.6:
   resolved "http://bnpm.byted.org/damerau-levenshtein/-/damerau-levenshtein-1.0.7.tgz#64368003512a1a6992593741a09a9d31a836f55d"
   integrity sha512-VvdQIPGdWP0SqFXghj79Wf/5LArmreyMsGLa6FG6iC4t3j7j5s71TrwWmT/4akbDQIqjfACkLZmjXhA7g2oUZw==
 
+danmu.js@^0.5.9:
+  version "0.5.9"
+  resolved "http://bnpm.byted.org/danmu.js/-/danmu.js-0.5.9.tgz#fa9068da71a50ab629444ed3d1c24068247dcdd6"
+  integrity sha512-VvEVHv8L0HBTbztvSqn0uALpoiYMWGmoMCFH+Ym/cpwdEDDbWIRho6CEgIs5sRDl+X63no8g4CBFv3BC/rS4nQ==
+  dependencies:
+    event-emitter "^0.3.5"
+
 dargs@^7.0.0:
   version "7.0.0"
   resolved "http://bnpm.byted.org/dargs/-/dargs-7.0.0.tgz#04015c41de0bcb69ec84050f3d9be0caf8d6d5cc"
@@ -4483,6 +4500,11 @@ deep-is@^0.1.3, deep-is@~0.1.3:
   version "0.1.3"
   resolved "http://bnpm.byted.org/deep-is/-/deep-is-0.1.3.tgz#b369d6fb5dbc13eecf524f91b070feedc357cf34"
   integrity sha1-s2nW+128E+7PUk+RsHD+7cNXzzQ=
+
+deepmerge@^2.0.1:
+  version "2.2.1"
+  resolved "http://bnpm.byted.org/deepmerge/-/deepmerge-2.2.1.tgz#5d3ff22a01c00f645405a2fbc17d0778a1801170"
+  integrity sha512-R9hc1Xa/NOBi9WRVUWg19rl1UB7Tt4kuPd+thNJgFZoxXsTz7ncaPaeIm+40oSGuP33DfMb4sZt1QIGiJzC4EA==
 
 deepmerge@^4.2.2:
   version "4.2.2"
@@ -4745,6 +4767,19 @@ dotenv@8.2.0:
   resolved "http://bnpm.byted.org/dotenv/-/dotenv-8.2.0.tgz#97e619259ada750eea3e4ea3e26bceea5424b16a"
   integrity sha512-8sJ78ElpbDJBHNeBzUbUVLsqKdccaa/BXF1uPTw3GrvQTBgrQrtObr2mUrE38vzYd8cEv+m/JBfDLioYcfXoaw==
 
+downloadjs@1.4.7:
+  version "1.4.7"
+  resolved "http://bnpm.byted.org/downloadjs/-/downloadjs-1.4.7.tgz#f69f96f940e0d0553dac291139865a3cd0101e3c"
+  integrity sha1-9p+W+UDg0FU9rCkROYZaPNAQHjw=
+
+draggabilly@^2.2.0:
+  version "2.3.0"
+  resolved "http://bnpm.byted.org/draggabilly/-/draggabilly-2.3.0.tgz#e0e653e09b938eb7ae654c4b7600114b24a2ee50"
+  integrity sha512-gSsHrIE3rYK9fhK2vQC83t2YsbKbAHQkLsxsXw9TI3LUziq8EZXjX8g7eaf/NlrtWTFqgz7FmP/kdIvLjt64wA==
+  dependencies:
+    get-size "^2.0.2"
+    unidragger "^2.3.0"
+
 duplexer@^0.1.1:
   version "0.1.2"
   resolved "http://bnpm.byted.org/duplexer/-/duplexer-0.1.2.tgz#3abe43aef3835f8ae077d136ddce0f276b0400e6"
@@ -4904,7 +4939,7 @@ es-to-primitive@^1.2.1:
     is-date-object "^1.0.1"
     is-symbol "^1.0.2"
 
-es5-ext@^0.10.35, es5-ext@^0.10.50:
+es5-ext@^0.10.35, es5-ext@^0.10.50, es5-ext@~0.10.14:
   version "0.10.53"
   resolved "http://bnpm.byted.org/es5-ext/-/es5-ext-0.10.53.tgz#93c5a3acfdbef275220ad72644ad02ee18368de1"
   integrity sha512-Xs2Stw6NiNHWypzRTY1MtaG/uJlwCk8kH81920ma8mvN8Xq1gsfhZvpkImLQArw8AHnv8MT2I45J3c0R8slE+Q==
@@ -5210,6 +5245,11 @@ esprima@^4.0.0, esprima@^4.0.1:
   resolved "http://bnpm.byted.org/esprima/-/esprima-4.0.1.tgz#13b04cdb3e6c5d19df91ab6987a8695619b0aa71"
   integrity sha1-E7BM2z5sXRnfkatph6hpVhmwqnE=
 
+esprima@~1.2.2:
+  version "1.2.5"
+  resolved "http://bnpm.byted.org/esprima/-/esprima-1.2.5.tgz#0993502feaf668138325756f30f9a51feeec11e9"
+  integrity sha1-CZNQL+r2aBODJXVvMPmlH+7sEek=
+
 esquery@^1.4.0:
   version "1.4.0"
   resolved "http://bnpm.byted.org/esquery/-/esquery-1.4.0.tgz#2148ffc38b82e8c7057dfed48425b3e61f0f24a5"
@@ -5254,7 +5294,20 @@ etag@~1.8.1:
   resolved "http://bnpm.byted.org/etag/-/etag-1.8.1.tgz#41ae2eeb65efa62268aebfea83ac7d79299b0887"
   integrity sha1-Qa4u62XvpiJorr/qg6x9eSmbCIc=
 
-eventemitter3@^4.0.0:
+ev-emitter@^1.0.1:
+  version "1.1.1"
+  resolved "http://bnpm.byted.org/ev-emitter/-/ev-emitter-1.1.1.tgz#8f18b0ce5c76a5d18017f71c0a795c65b9138f2a"
+  integrity sha1-jxiwzlx2pdGAF/ccCnlcZbkTjyo=
+
+event-emitter@^0.3.5:
+  version "0.3.5"
+  resolved "http://bnpm.byted.org/event-emitter/-/event-emitter-0.3.5.tgz#df8c69eef1647923c7157b9ce83840610b02cc39"
+  integrity sha1-34xp7vFkeSPHFXuc6DhAYQsCzDk=
+  dependencies:
+    d "1"
+    es5-ext "~0.10.14"
+
+eventemitter3@^4.0.0, eventemitter3@^4.0.7:
   version "4.0.7"
   resolved "http://bnpm.byted.org/eventemitter3/-/eventemitter3-4.0.7.tgz#2de9b68f6528d5644ef5c59526a1b4a07306169f"
   integrity sha1-Lem2j2Uo1WRO9cWVJqG0oHMGFp8=
@@ -5683,6 +5736,15 @@ fs-extra@^10.0.0:
     jsonfile "^6.0.1"
     universalify "^2.0.0"
 
+fs-extra@^5.0.0:
+  version "5.0.0"
+  resolved "http://bnpm.byted.org/fs-extra/-/fs-extra-5.0.0.tgz#414d0110cdd06705734d055652c5411260c31abd"
+  integrity sha512-66Pm4RYbjzdyeuqudYqhFiNBbCIuI9kgRqLPSHIlXHidW8NIQtVdkM1yeZ4lXwuhbTETv3EUGMNHAAw6hiundQ==
+  dependencies:
+    graceful-fs "^4.1.2"
+    jsonfile "^4.0.0"
+    universalify "^0.1.0"
+
 fs-extra@^7.0.0:
   version "7.0.1"
   resolved "http://bnpm.byted.org/fs-extra/-/fs-extra-7.0.1.tgz#4f189c44aa123b895f722804f55ea23eadc348e9"
@@ -5756,6 +5818,14 @@ functional-red-black-tree@^1.0.1:
   resolved "http://bnpm.byted.org/functional-red-black-tree/-/functional-red-black-tree-1.0.1.tgz#1b0ab3bd553b2a0d6399d29c0e3ea0b252078327"
   integrity sha1-GwqzvVU7Kg1jmdKcDj6gslIHgyc=
 
+generate-source-map@0.0.5:
+  version "0.0.5"
+  resolved "http://bnpm.byted.org/generate-source-map/-/generate-source-map-0.0.5.tgz#f1255f31653cb0231e6713a7dc8375af4f33a509"
+  integrity sha1-8SVfMWU8sCMeZxOn3IN1r08zpQk=
+  dependencies:
+    esprima "~1.2.2"
+    source-map "~0.1.34"
+
 gensync@^1.0.0-beta.1, gensync@^1.0.0-beta.2:
   version "1.0.0-beta.2"
   resolved "http://bnpm.byted.org/gensync/-/gensync-1.0.0-beta.2.tgz#32a6ee76c3d7f52d46b2b1ae5d93fea8580a25e0"
@@ -5784,6 +5854,11 @@ get-package-type@^0.1.0:
   version "0.1.0"
   resolved "http://bnpm.byted.org/get-package-type/-/get-package-type-0.1.0.tgz#8de2d803cff44df3bc6c456e6668b36c3926e11a"
   integrity sha1-jeLYA8/0TfO8bEVuZmizbDkm4Ro=
+
+get-size@^2.0.2:
+  version "2.0.3"
+  resolved "http://bnpm.byted.org/get-size/-/get-size-2.0.3.tgz#54a1d0256b20ea7ac646516756202769941ad2ef"
+  integrity sha1-VKHQJWsg6nrGRlFnViAnaZQa0u8=
 
 get-stream@^4.0.0:
   version "4.1.0"
@@ -10873,6 +10948,13 @@ source-map@^0.7.3, source-map@~0.7.2:
   resolved "http://bnpm.byted.org/source-map/-/source-map-0.7.3.tgz#5302f8169031735226544092e64981f751750383"
   integrity sha512-CkCj6giN3S+n9qrYiBTX5gystlENnRW5jZeNLHpe6aue+SrHcG5VYwujhW9s4dY31mEGsxBDrHR6oI69fTXsaQ==
 
+source-map@~0.1.34:
+  version "0.1.43"
+  resolved "http://bnpm.byted.org/source-map/-/source-map-0.1.43.tgz#c24bc146ca517c1471f5dacbe2571b2b7f9e3346"
+  integrity sha1-wkvBRspRfBRx9drL4lcbK3+eM0Y=
+  dependencies:
+    amdefine ">=0.0.4"
+
 sourcemap-codec@^1.4.4:
   version "1.4.8"
   resolved "http://bnpm.byted.org/sourcemap-codec/-/sourcemap-codec-1.4.8.tgz#ea804bd94857402e6992d05a38ef1ae35a9ab4c4"
@@ -11672,6 +11754,13 @@ unicode-property-aliases-ecmascript@^1.0.4:
   resolved "http://bnpm.byted.org/unicode-property-aliases-ecmascript/-/unicode-property-aliases-ecmascript-1.1.0.tgz#dd57a99f6207bedff4628abefb94c50db941c8f4"
   integrity sha1-3Vepn2IHvt/0Yoq++5TFDblByPQ=
 
+unidragger@^2.3.0:
+  version "2.3.1"
+  resolved "http://bnpm.byted.org/unidragger/-/unidragger-2.3.1.tgz#2e8c34feff61affa96dc895234ddfc1ea4ec7515"
+  integrity sha1-Low0/v9hr/qW3IlSNN38HqTsdRU=
+  dependencies:
+    unipointer "^2.3.0"
+
 union-value@^1.0.0:
   version "1.0.1"
   resolved "http://bnpm.byted.org/union-value/-/union-value-1.0.1.tgz#0b6fe7b835aecda61c6ea4d4f02c14221e109847"
@@ -11681,6 +11770,13 @@ union-value@^1.0.0:
     get-value "^2.0.6"
     is-extendable "^0.1.1"
     set-value "^2.0.1"
+
+unipointer@^2.3.0:
+  version "2.3.0"
+  resolved "http://bnpm.byted.org/unipointer/-/unipointer-2.3.0.tgz#ba0dc462ce31c2a88e80810e19c3bae0ce47ed9f"
+  integrity sha512-m85sAoELCZhogI1owtJV3Dva7GxkHk2lI7A0otw3o0OwCuC/Q9gi7ehddigEYIAYbhkqNdri+dU1QQkrcBvirQ==
+  dependencies:
+    ev-emitter "^1.0.1"
 
 uniq@^1.0.1:
   version "1.0.1"
@@ -12362,6 +12458,37 @@ ws@^7.4.6:
   version "7.5.4"
   resolved "http://bnpm.byted.org/ws/-/ws-7.5.4.tgz#56bfa20b167427e138a7795de68d134fe92e21f9"
   integrity sha512-zP9z6GXm6zC27YtspwH99T3qTG7bBFv2VIkeHstMLrLlDJuzA7tQ5ls3OJ1hOGGCzTQPniNJoHXIAOS0Jljohg==
+
+xgplayer-mp4@^1.2.4:
+  version "1.2.4"
+  resolved "http://bnpm.byted.org/xgplayer-mp4/-/xgplayer-mp4-1.2.4.tgz#67b3469e701830b09b8d53e3ff935bd643222504"
+  integrity sha512-5yAMhEV1zYxTGIFrb4MwHgqYZvhylXCRcQlZyt6ebYMzs/swIOZ23Yviv04CwaCdWx8oaHFUPq5cGc14z6dBfg==
+  dependencies:
+    concat-typed-array "^1.0.2"
+    deepmerge "^2.0.1"
+    event-emitter "^0.3.5"
+
+xgplayer-subtitles@^1.0.13:
+  version "1.0.16"
+  resolved "http://bnpm.byted.org/xgplayer-subtitles/-/xgplayer-subtitles-1.0.16.tgz#c6764111c3a27b1f61f35242963c563741fb6e9d"
+  integrity sha512-6jb84ZKIVMUmIG6Nq/iP/Uy31KegetOrUBE7V2OLlSyCENAJujwnXlk+TeWdhS5KuvO1qmDJ4hX+wXuKr5nyDQ==
+  dependencies:
+    eventemitter3 "^4.0.7"
+    generate-source-map "0.0.5"
+
+xgplayer@^2.30.1:
+  version "2.30.1"
+  resolved "http://bnpm.byted.org/xgplayer/-/xgplayer-2.30.1.tgz#6ab15661efa1b3a26f80dd25221b7a5b1b3618f5"
+  integrity sha512-95jR1EfGMRY2/rKDVuC0iOolBhNWTg9htqUOqiASxiPAVNNQt1D5lZuL+4NTCw0sdp/8w9oROFnzwIerkaAlRQ==
+  dependencies:
+    chalk "^2.3.2"
+    commander "^2.15.1"
+    danmu.js "^0.5.9"
+    downloadjs "1.4.7"
+    draggabilly "^2.2.0"
+    event-emitter "^0.3.5"
+    fs-extra "^5.0.0"
+    xgplayer-subtitles "^1.0.13"
 
 xml-name-validator@^3.0.0:
   version "3.0.0"

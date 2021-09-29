@@ -113,7 +113,7 @@ const AceStateManager: React.FC = () => {
 };
 
 const ChildA: React.FC = () => {
-  const { counter, setCounter } = store.useModel(m => [m.counter]);
+  const { counter, setCounter } = store.useModel((m) => [m.counter]);
 
   return (
     <div>
