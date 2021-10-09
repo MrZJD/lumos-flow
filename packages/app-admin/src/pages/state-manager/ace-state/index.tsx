@@ -45,7 +45,7 @@ function createModel<T>(useModelHooks: () => T) {
       // STORE_DATA = state;
 
       useEffect(() => {
-        console.log('state', state);
+        // console.log('state', state);
         STORE_DATA = state;
         const ev = new CustomEvent('storeUpdate', { detail: STORE_DATA, bubbles: false } as any);
         window.dispatchEvent(ev);
@@ -77,13 +77,13 @@ function createModel<T>(useModelHooks: () => T) {
           }
 
           if (!getDep) {
-            // setStore(evt.detail);
+            setStore(evt.detail);
             return
           }
 
           // 这里就可以做依赖的比较来判断是否需要更新子组件
           if (!sampleEqual(prevDep.current, getDep(evt.detail))) {
-            // setStore(evt.detail);
+            setStore(evt.detail);
             prevDep.current = getDep(evt.detail);
             return
           }

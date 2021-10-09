@@ -1,4 +1,4 @@
 # 一些编程范式
 
 * Plugins - 插件
-* Chain - 链式编程
+* Chain - 链式命令

@@ -27,6 +27,7 @@ module.exports = {
         "require-jsdoc": ["off"],
         "comma-dangle": ["off"],
         "max-len": ["off"],
-        "no-invalid-this": ["warn"]
+        "no-invalid-this": ["warn"],
+        "valid-jsdoc": ["warn"]
     }
 };

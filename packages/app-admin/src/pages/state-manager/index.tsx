@@ -3,6 +3,7 @@ import Tab, { Item } from '@/component/Tab';
 import ContextDemo from './context';
 import HoxDemo from './hox';
 import AceStateDemo from './ace-state';
+import ReduxApp from './redux';
 
 const StatePage: React.FC = () => {
   return (
@@ -12,6 +13,10 @@ const StatePage: React.FC = () => {
       <p>基于hooks的管理方案</p>
 
       <AceStateDemo />
+
+      <p>基于Redux的管理方案</p>
+
+      <ReduxApp />
 
       {/* <Tab defaultKey="context">
         <Item tabKey="hox" title="Hox Demo">

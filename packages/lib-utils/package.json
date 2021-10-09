@@ -4,7 +4,6 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "jest": "jest --init",
     "test": "jest"
   },
   "devDependencies": {

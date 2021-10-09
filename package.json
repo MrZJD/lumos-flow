@@ -14,11 +14,15 @@
   },
   "dependencies": {
     "@craco/craco": "^6.2.0",
-    "hox": "^1.1.4"
+    "@reduxjs/toolkit": "^1.6.2",
+    "hox": "^1.1.4",
+    "react-redux": "^7.2.5",
+    "redux": "^4.1.1"
   },
   "devDependencies": {
     "@commitlint/cli": "^13.1.0",
     "@commitlint/config-conventional": "^13.1.0",
+    "@types/react-redux": "^7.1.19",
     "@typescript-eslint/eslint-plugin": "^4.31.1",
     "@typescript-eslint/parser": "^4.31.1",
     "eslint": "^7.32.0",

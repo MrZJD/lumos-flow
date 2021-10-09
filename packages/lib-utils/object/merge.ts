@@ -13,7 +13,6 @@ function mergeArray <T>(source: T[], target: T[]): T[] {
   return result;
 };
 
-// TODO: 测试用例
 export const merge = <T>(source: T, target: T): T => {
   const stype = typeof source;
   const ttype = typeof target;

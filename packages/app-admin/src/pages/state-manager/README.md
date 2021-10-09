@@ -79,4 +79,10 @@ const useModel = (getDeps: (store: T) => any[]) => {
 };
 ```
 
+# React其他一些状态管理方案
+
+* Redux
+
+
+
 

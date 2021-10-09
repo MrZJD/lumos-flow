@@ -8,6 +8,7 @@ export const chainify = <S, T extends {}>(handlers: any[]) => {
     // @ts-ignore
     func._this = _this; // attch this attribute
 
+    // proxy fn
     prev[func.name] = (...args) => {
       _this.current = func(_this.current, ...args);
 
