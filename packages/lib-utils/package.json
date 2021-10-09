@@ -2,5 +2,16 @@
   "name": "lib-utils",
   "version": "1.0.0",
   "main": "index.js",
-  "license": "MIT"
+  "license": "MIT",
+  "scripts": {
+    "jest": "jest --init",
+    "test": "jest"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.15.8",
+    "@babel/preset-env": "^7.15.8",
+    "@babel/preset-typescript": "^7.15.0",
+    "babel-jest": "^27.2.5",
+    "jest": "^27.2.5"
+  }
 }

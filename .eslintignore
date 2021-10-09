@@ -2,3 +2,4 @@ node_modules
 
 craco.config.js
 reportWebVitals.js
+jest.config.ts
