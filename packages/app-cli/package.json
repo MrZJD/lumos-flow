@@ -1,0 +1,13 @@
+{
+  "name": "app-cli",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "esbuild": "^0.13.9",
+    "lib-utils": "1.0.0"
+  },
+  "scripts": {
+    "esbuild": "./node_modules/.bin/esbuild ./esbuild/index.tsx --bundle --outfile=dist/bundle.js --target=chrome58"
+  }
+}

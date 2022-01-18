@@ -1,7 +1,7 @@
 {
-  "name": "monorepo_demo",
+  "name": "lumos",
   "version": "1.0.0",
-  "description": "monorepo demo",
+  "description": "前端物料集合",
   "main": "index.js",
   "author": "390303304@qq.com",
   "license": "MIT",

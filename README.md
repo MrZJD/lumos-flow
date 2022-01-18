@@ -1,4 +1,21 @@
-# Monorepo Demo
+# 工具集
+
+## 目录说明
+
+```text
+- packages/app-admin # PC端项目template
+- packages/app-mobile # Mobile端项目template
+- packages/app-cli # 构建工具
+- packages/lib-alogorithms # 算法
+- packages/lib-components # 组件物料
+- packages/lib-hooks # react hooks物料
+- packages/lib-scripts # 工具脚本
+- packages/lib-utils # 工具方法物料
+```
+
+
+
+## 工程化
 
 ```bash
 yarn workspace app-a start # dev
@@ -11,7 +28,7 @@ cd ./packages/app-admin/
 yarn start
 ```
 
-## Yarn Workspace管理依赖
+### Yarn Workspace管理依赖
 
 添加公共依赖
 
@@ -32,14 +49,14 @@ yarn workspace app-a add modules
 yarn workspace app-a add lib-components@1.0.0 # 需要添加版本号
 ```
 
-## 子仓
+### 子仓
 
 * 应用仓
   * 包含应用独立运行的所有配置（除从主仓继承的依赖外）
 * 公用代码仓
   * 只包含源码，不应该配置其他内容
 
-## 应用仓配置
+### 应用仓配置
 
 需要把babel includes加上其他模块，便于交叉引用
 

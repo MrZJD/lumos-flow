@@ -1,32 +1,9 @@
 import React, { useCallback, useEffect, useRef, useState } from 'react';
 import usePersistCallback from 'lib-hooks/usePersistCallback';
+import usePlayerListener from '../utils/usePlayerListener';
 
 interface IProps {
   player: any; // xgplayer instance
-}
-
-const usePlayerListener = (player: any, evtName: string, handler: any) => {
-  useEffect(() => {
-    if (!player) {
-      return;
-    }
-
-    player.on(evtName, handler);
-
-    return () => player.off(evtName, handler);
-  }, [player]);
-}
-
-const useListener = (dom: HTMLElement, evtName: string, handler: any) => {
-  useEffect(() => {
-    if (!dom) {
-      return;
-    }
-
-    dom.addEventListener(evtName, handler);
-
-    return () => dom.addEventListener(evtName, handler);
-  }, [dom]);
 }
 
 const FPSInfo: React.FC<IProps> = ({ player }) => {

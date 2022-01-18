@@ -1,0 +1,11 @@
+{
+  "name": "lib-scripts",
+  "description": "通用工具脚本",
+  "version": "0.0.1",
+  "main": "index.js",
+  "license": "MIT",
+  "private": true,
+  "devDependencies": {
+    "ffmpeg": "^0.0.4"
+  }
+}
