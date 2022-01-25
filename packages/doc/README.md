@@ -27,7 +27,8 @@
 
 ## 工具
 
-* [WIP]whistle使用指南
+* [[WIP]whistle使用指南](./articles/tools/whistle_handbook.md)
+* [WIP]mermaid快速画图-设计文档
 
 ## 中台方向（PC web）
 
