@@ -1,0 +1,7 @@
+{
+  "name": "doc",
+  "version": "1.0.0",
+  "description": "文档汇总",
+  "main": "index.js",
+  "license": "MIT"
+}
