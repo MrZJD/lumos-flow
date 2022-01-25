@@ -35,5 +35,5 @@ w2 start
 
 ## 参考
 
-[常用代理规则](https://www.cnblogs.com/kaiye/p/10137592.html)
-[部分场景](https://www.jianshu.com/p/b84fe01c721b)
+* [常用代理规则](https://www.cnblogs.com/kaiye/p/10137592.html)
+* [部分场景](https://www.jianshu.com/p/b84fe01c721b)
