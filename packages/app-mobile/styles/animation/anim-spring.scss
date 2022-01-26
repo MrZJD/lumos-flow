@@ -1,0 +1,43 @@
+@keyframes kf-anim-spring {
+
+  0% {
+    transform: scale(0,0); }
+
+  4.878% {
+    transform: scale(.323,.323); }
+
+  9.756% {
+    transform: scale(.785,.785); }
+
+  14.634% {
+    transform: scale(1.075,1.075); }
+
+  19.512% {
+    transform: scale(1.1,1.1); }
+
+  39.024% {
+    transform: scale(.976,.976); }
+
+  59.349% {
+    transform: scale(1.003,1.003); }
+
+  78.861% {
+    transform: scale(.999,.999); }
+
+  99.186% {
+    transform: scale(1,1); }
+
+  100% {
+    transform: scale(1,1); }
+}
+
+.anim-spring {
+  opacity: 1;
+  animation: kf-anim-spring .74s linear forwards;
+}
+
+.anim-spring-close {
+  transition: opacity 200ms linear, transform 350ms cubic-bezier(1, 0, 1, 1);
+  opacity: 0;
+  transform: scale(0,0);
+}
