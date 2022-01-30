@@ -17,6 +17,8 @@
 
 ### Test
 
+* Stats.js测试页面渲染性能 https://github.com/mrdoob/stats.js
+
 ### CICD
 
 * 利用Gitlab CI发布npm包

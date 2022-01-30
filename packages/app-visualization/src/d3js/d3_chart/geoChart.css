@@ -1,0 +1,8 @@
+#geo-chart path {
+  stroke: #fff;
+  stroke-width: 0.5px;
+  fill: grey;
+}
+#geo-chart .state-21 { fill: red; }
+#geo-chart .state-31 { fill: blue; }
+#geo-chart .state-27 { fill: green; }

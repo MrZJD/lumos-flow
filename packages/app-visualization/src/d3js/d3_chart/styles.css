@@ -1,0 +1,8 @@
+#bar-chart rect {
+  fill: gray;
+}
+#bar-chart text {
+  fill: yellow;
+  font: 12px sans-serif;
+  text-anchor: end;
+}
