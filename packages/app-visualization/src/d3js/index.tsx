@@ -11,6 +11,7 @@ import D3Scale from './d3_draw/scale';
 import D3Axis from './d3_draw/axis';
 import D3Shape from './d3_draw/shape';
 import D3Interaction from './d3_interaction';
+import BarChartRace from './d3_practice/bar_chart_race';
 
 export default () => {
   return (
@@ -40,6 +41,9 @@ export default () => {
 
       <h3 id="interaction-api-section">D3 interaction API</h3>
       <D3Interaction />
+
+      <h3 id="bar-chart-race">Bar Chart Race</h3>
+      <BarChartRace />
     </div>
   );
 }
