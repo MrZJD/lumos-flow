@@ -7,6 +7,8 @@ export default () => {
       <h1>前端可视化Handbook</h1>
 
       <Link to="/d3">d3</Link>
+      <br />
+      <Link to="/ecsy">ecsy</Link>
     </div>
   );
 }
