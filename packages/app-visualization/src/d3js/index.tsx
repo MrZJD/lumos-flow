@@ -12,6 +12,7 @@ import D3Axis from './d3_draw/axis';
 import D3Shape from './d3_draw/shape';
 import D3Interaction from './d3_interaction';
 import BarChartRace from './d3_practice/bar_chart_race';
+import StabilityLineChart from './d3_practice/stability/LineChart';
 
 export default () => {
   return (
@@ -44,6 +45,9 @@ export default () => {
 
       <h3 id="bar-chart-race">Bar Chart Race</h3>
       <BarChartRace />
+
+      <h3 id="stability-bar-chart">Stability Bar Chart</h3>
+      <StabilityLineChart />
     </div>
   );
 }

@@ -152,7 +152,6 @@ export default () => {
       return;
     }
 
-
     context = canvasRef.current.getContext("2d");
 
     const world = new World();
