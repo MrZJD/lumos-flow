@@ -71,7 +71,7 @@ export default (props: IProps) => {
 
     return [
       xAxis,
-      scaleMapper
+      scaleMapper,
     ];
   };
 
@@ -118,7 +118,8 @@ export default (props: IProps) => {
 
     return [
       yAxis,
-      scaleMapper
+      scaleMapper,
+      valueScale
     ];
   }
 
@@ -132,7 +133,7 @@ export default (props: IProps) => {
     const points = [];
 
     const xyline = d3.line()
-      .curve(d3.curveNatural) // 指定曲率
+      // .curve(d3.curveNatural) // 指定曲率
       .x(d => xMapper((+(d[0] as unknown as string) || 0) * 1000))
       .y(d => yMapper(d[1] as unknown as number));
 
@@ -190,25 +191,41 @@ export default (props: IProps) => {
       .attr('stroke-width', 2);
   };
 
-  const showTooltips = (svg: d3.Selection<SVGSVGElement, unknown, null, undefined>) => {
+  const showTooltips = (
+    svg: d3.Selection<SVGSVGElement, unknown, null, undefined>,
+    xScale: d3.ScaleTime<any, any>,
+    yScale: d3.ScaleLinear<any, any>,
+    timeArr: number[],
+    dataSource: Record<string, number>,
+  ) => {
     let tooltips: d3.Selection<SVGGElement, unknown, null, undefined> | null = null;
     let line: d3.Selection<SVGLineElement, unknown, null, undefined> | null = null;
-
-    
+    let point: d3.Selection<SVGCircleElement, unknown, null, undefined> | null = null;
 
     svg.on('mousemove', function (evt) {
-      if (line) {
-        line.remove();
-      }
+      line && line.remove();
+      point && point.remove();
+
+      const xValue = xScale.range([yAxisLeftPad, width]).invert(evt.clientX); // => 根据x坐标获取x的值
+      const xNeigborIndex = d3.bisect(timeArr, xValue.getTime() / 1000 >> 0);
+      const xTarget = timeArr[xNeigborIndex];
+      const xPosition = xScale(xTarget * 1000);
 
       tooltips = svg.append('g');
+
       line = tooltips.append('line')
-        .attr('x1', evt.clientX)
+        .attr('x1', xPosition)
         .attr('y1', 0)
-        .attr('x2', evt.clientX)
+        .attr('x2', xPosition)
         .attr('y2', height - xAxisBottomPad)
-        .attr('stroke', '#333')
-        .attr('stroke-width', 2);
+        .attr('stroke', '#999')
+        .attr('stroke-width', 1);
+
+      point = tooltips.append('circle')
+        .attr('cx', xPosition)
+        .attr('cy', yScale(dataSource[xTarget]))
+        .attr('r', 3)
+        .attr('fill', '#4e83f3');
     }).on('mouseleave', function (evt) {
       if (tooltips) {
         tooltips.remove();
@@ -247,7 +264,7 @@ export default (props: IProps) => {
     drawPath(svg, metrics, [xScaleMapper, yScaleMapper]);
     drawEvents(svg, data.events, [xScaleMapper, yScaleMapper]);
 
-    showTooltips(svg);
+    showTooltips(svg, xScaleMapper, yScaleMapper, timeArr, data.metrics);
   }, []);
 
   return (
