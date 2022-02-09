@@ -54,3 +54,11 @@
 ## HTML5 Game framework
 
 * [phaser.js](https://github.com/phaserjs/phaser)
+
+## TODO
+
+- [] Stability各类型图表实现
+- [] 细分: d3组件 tooltips
+- [] 细分: d3组件 legends
+- [] SVG & Canvas Context切换对比
+- [] antv / d3 / echarts 对比
