@@ -51,6 +51,8 @@
 * [ammo.js (Bullet)](https://github.com/kripken/ammo.js/)
 * [sprite.js](http://spritejs.com/#/)
 
+## Resource Manager
+
 ## HTML5 Game framework
 
 * [phaser.js](https://github.com/phaserjs/phaser)
