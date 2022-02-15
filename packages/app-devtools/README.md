@@ -32,14 +32,14 @@ fetch devtools-frontend
 cd devtools-frontend
 gn gen out/Default
 autoninja -C out/Default
+
+## out/Default包含了前端页面产物
+## 引入至项目工程下即可
 ```
 
 ## Devtools Protocol
 
 - [DOC - Chrome Devtools Protocol](https://chromedevtools.github.io/devtools-protocol/)
-
-## out/Default包含了前端页面产物
-## 引入至项目工程下即可
 
 ## Frontend Host（Injection）
 
