@@ -1,7 +1,7 @@
 # Chrome Devtools Arch
 
-> 根据node-inspector & [chrome://inspect/#devices](chrome://inspect/#devices)进行功能发散
-
+* [node-inspector](https://github.com/node-inspector/node-inspector)
+* [chrome://inspect/#devices](chrome://inspect/#devices)
 
 **讨论两个问题**
 
