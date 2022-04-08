@@ -97,3 +97,23 @@ module.exports = {
   }
 }
 ```
+
+## Awesome
+
+* 前端
+  * Swiper
+    * [SwiperJS](https://swiperjs.com/get-started)
+    * [splide.js](https://splidejs.com/)
+  * SSR
+* BFF
+* 图片处理
+  * [gm](https://www.npmjs.com/package/gm)
+  * [jimp](https://github.com/oliver-moran/jimp)
+* 音视频处理(Video / Audio)
+  * [ffmpeg doc](http://ffmpeg.org/)
+  * [npm: node-ffmpeg](https://www.npmjs.com/package/ffmpeg)
+* Backend
+  * 微服务架构
+* Terminal
+  * [cmder]()
+  * [wrap - The terminal for the 21st century](https://www.warp.dev/)
