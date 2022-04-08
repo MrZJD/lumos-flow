@@ -1,0 +1,15 @@
+{
+  "name": "lumos-mock",
+  "description": "client mock service based on Chrome extension",
+  "version": "0.0.1",
+  "manifest_version": 3,
+  "action": {},
+  "icons": {
+    "16": "/images/icon.png",
+    "32": "/images/icon.png",
+    "48": "/images/icon.png",
+    "128": "/images/icon.png"
+  },
+  "permissions": ["storage", "webRequest"],
+  "devtools_page": "./views/devtools/index.html"
+}

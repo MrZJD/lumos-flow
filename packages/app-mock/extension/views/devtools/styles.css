@@ -1,0 +1,111 @@
+.page {
+  padding: 24px;
+  font-size: 14px;
+}
+
+.title {
+  margin: 0;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #eee;
+}
+
+.sub-title {
+  font-size: 16px;
+  color: #333;
+}
+
+.tip {
+  color: #666;
+  font-size: 14px;
+  margin: 48px 0;
+  text-indent: 16px;
+}
+
+.button {
+  padding: 6px 12px;
+  border: 1px solid #999;
+  display: inline-block;
+  border-radius: 4px;
+  box-shadow: 0px 0px 4px inset rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  user-select: none;
+}
+
+.button:hover {
+  box-shadow: 0px 0px 4px inset rgba(0, 0, 0, 0.15), 0px 0px 4px rgba(0, 0, 0, 0.15);
+}
+
+.button:active {
+  opacity: 0.8;
+}
+
+#list {
+  margin: 12px 0 24px;
+}
+
+.item {
+  margin: 6px 0;
+  padding: 12px 0;
+  border-bottom: 1px solid #eee;
+  display: flex;
+  align-items: center;
+}
+
+.item-switch {
+  width: 22px;
+  height: 10px;
+  margin-left: 8px;
+  margin-right: 18px;
+  background-color: #d3d3d3;
+  border-radius: 6px;
+  cursor: pointer;
+  position: relative;
+}
+
+.item-switch:after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0px;
+  transform: translate(-50%, -50%);
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  border: 1px solid #ccc;
+  background-color: #fff;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.1);
+}
+
+.item-switch.checked {
+  background-color: #0066ffee;
+}
+
+.item-switch.checked:after {
+  left: 100%;
+}
+
+.item-switch:active {
+  opacity: 0.8;
+}
+
+.item-filename {
+  font-size: 14px;
+  color: #666;
+  font-weight: bold;
+  margin-right: 8px;
+}
+
+.item-filepath {
+  font-size: 12px;
+  color: #999;
+  margin-right: 18px;
+}
+
+.item-delete {
+  cursor: pointer;
+  user-select: none;
+}
+
+.item-delete:active {
+  opacity: 0.8;
+}

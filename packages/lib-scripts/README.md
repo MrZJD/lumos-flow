@@ -20,3 +20,9 @@
 # 3. npm install node-ffmpeg
 # 4. 参考官网doc或者scripts/ffmpeg.js执行
 ```
+
+## 2. 图片处理工具
+
+* [gm](https://www.npmjs.com/package/gm)
+* [jimp](https://github.com/oliver-moran/jimp)
+* [批量图片压缩 super-tinypng](https://github.com/zhanyuzhang/super-tinypng)

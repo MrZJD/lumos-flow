@@ -1,0 +1,1 @@
+chrome.devtools.panels.create("Lumos Mock", null, 'views/devtools/panel.html');

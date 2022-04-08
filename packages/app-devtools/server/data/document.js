@@ -58,7 +58,20 @@ module.exports = {
           "localName": "body",
           "nodeValue": "",
           "childNodeCount": 3,
-          "attributes": []
+          "attributes": [],
+          "children": [
+            {
+              "nodeId": 7,
+              "parentId": 6,
+              "backendNodeId": 1902,
+              "nodeType": 3,
+              "nodeName": "",
+              "localName": "",
+              "nodeValue": "测试文本",
+              "childNodeCount": 0,
+              "attributes": [],
+            }
+          ]
         }
       ],
       "attributes": [

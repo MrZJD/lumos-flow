@@ -1,4 +1,5 @@
 const doc = require('./data/document');
+const screenshot = require('./data/screenshot');
 
 class CDPHandler {
   _handler = {};
@@ -43,6 +44,32 @@ cdpHandler.register('DOM.getDocument', function (id, params) {
     result: {
       root: doc
     }
+  }));
+});
+
+cdpHandler.register('Page.startScreencast', function (id, params) {
+  this._ws.send(JSON.stringify({ id, result: {} }));
+
+  this._ws.send(JSON.stringify({
+    method: 'Page.screencastFrame',
+    params: screenshot()
+  }));
+});
+
+cdpHandler.register('Page.stopScreencast', function (id, params) {
+  this._ws.send(JSON.stringify({ id, result: {} }));
+});
+
+let offsetY = 0;
+
+cdpHandler.register('Input.emulateTouchFromMouseEvent', function (id, params) {
+  this._ws.send(JSON.stringify({ id, result: {} }));
+
+  offsetY = Math.min(offsetY + params.deltaY, 0);
+
+  this._ws.send(JSON.stringify({
+    method: 'Page.screencastFrame',
+    params: screenshot(offsetY)
   }));
 });
 

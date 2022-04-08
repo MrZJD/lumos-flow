@@ -1,0 +1,10 @@
+{
+  "name": "app-mock",
+  "version": "0.0.1",
+  "description": "lumos mock services",
+  "scripts": {
+    "build:extension": ""
+  },
+  "main": "index.js",
+  "license": "MIT"
+}
