@@ -13,8 +13,6 @@
 - packages/lib-utils # 工具方法物料
 ```
 
-
-
 ## 工程化
 
 ```bash
@@ -105,15 +103,19 @@ module.exports = {
     * [SwiperJS](https://swiperjs.com/get-started)
     * [splide.js](https://splidejs.com/)
   * SSR
+* Test
+  * Stats.js测试页面渲染性能 https://github.com/mrdoob/stats.js
 * BFF
 * 图片处理
   * [gm](https://www.npmjs.com/package/gm)
   * [jimp](https://github.com/oliver-moran/jimp)
+  * [ImageOptim for Mac](https://imageoptim.com/mac)
 * 音视频处理(Video / Audio)
   * [ffmpeg doc](http://ffmpeg.org/)
   * [npm: node-ffmpeg](https://www.npmjs.com/package/ffmpeg)
 * Backend
   * 微服务架构
-* Terminal
+* Command
   * [cmder]()
   * [wrap - The terminal for the 21st century](https://www.warp.dev/)
+  * [charm.sh](https://charm.sh/)
