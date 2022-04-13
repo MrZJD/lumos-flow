@@ -99,6 +99,8 @@ module.exports = {
 ## Awesome
 
 * 前端
+  * Great UI
+    * [MUI for ReactJS](https://mui.com/)
   * Swiper
     * [SwiperJS](https://swiperjs.com/get-started)
     * [splide.js](https://splidejs.com/)
@@ -106,16 +108,30 @@ module.exports = {
 * Test
   * Stats.js测试页面渲染性能 https://github.com/mrdoob/stats.js
 * BFF
+* FileSystem
+  * [nodejs - fs-extra](https://www.npmjs.com/package/fs-extra)
 * 图片处理
   * [gm](https://www.npmjs.com/package/gm)
   * [jimp](https://github.com/oliver-moran/jimp)
   * [ImageOptim for Mac](https://imageoptim.com/mac)
+  * [压缩 - imagemin](https://github.com/imagemin)
+  * [压缩 - jpegtrans](https://github.com/imagemin/jpegtran-bin)
+  * [压缩 - tinypng](https://tinypng.com/)
 * 音视频处理(Video / Audio)
   * [ffmpeg doc](http://ffmpeg.org/)
   * [npm: node-ffmpeg](https://www.npmjs.com/package/ffmpeg)
+* CMS
+  * []()
 * Backend
   * 微服务架构
 * Command
   * [cmder]()
   * [wrap - The terminal for the 21st century](https://www.warp.dev/)
   * [charm.sh](https://charm.sh/)
+  * [nodejs - commander](https://github.com/tj/commander.js/blob/HEAD/Readme_zh-CN.md)
+  * [nodejs - chalk](https://www.npmjs.com/package/chalk)
+  * [nodejs - zx](https://www.npmjs.com/package/zx)
+  * [nodejs - ora](https://www.npmjs.com/package/ora)
+* Devtool
+  * [[WIP]whistle使用指南](./packages/doc/articles/tools/whistle_handbook.md)
+  * [WIP]mermaid快速画图-设计文档
