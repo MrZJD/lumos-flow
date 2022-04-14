@@ -104,6 +104,9 @@ module.exports = {
   * Swiper
     * [SwiperJS](https://swiperjs.com/get-started)
     * [splide.js](https://splidejs.com/)
+  * Form
+    * [formik](https://formik.org/docs/overview)
+    * [formily](https://formilyjs.org/)
   * SSR
 * Test
   * Stats.js测试页面渲染性能 https://github.com/mrdoob/stats.js
