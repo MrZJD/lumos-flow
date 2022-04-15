@@ -107,6 +107,7 @@ module.exports = {
   * Form
     * [formik](https://formik.org/docs/overview)
     * [formily](https://formilyjs.org/)
+    * [x-render](https://x-render.gitee.io/form-render/advanced/measure)
   * SSR
 * Test
   * Stats.js测试页面渲染性能 https://github.com/mrdoob/stats.js
@@ -125,6 +126,9 @@ module.exports = {
   * [npm: node-ffmpeg](https://www.npmjs.com/package/ffmpeg)
 * CMS
   * []()
+* DDD
+  * [JSON Schema](https://json-schema.org/understanding-json-schema/)
+  * [JSON Schema - zh-CN](https://json-schema.apifox.cn/)
 * Backend
   * 微服务架构
 * Command

@@ -12,6 +12,7 @@
 
 * 基于hooks的状态管理
 * Reconliliation - 如何获取一个组件的渲染次数
+* [React Fiber algorithm](https://www.velotio.com/engineering-blog/react-fiber-algorithm)
 
 ### Docify
 
