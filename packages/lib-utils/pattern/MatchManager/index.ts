@@ -2,30 +2,30 @@
  * 场景: 抽离Switch -> case || Map映射处理条件匹配时 编程范式
  */
 type TMatcher<T> = string | number | ((input: T) => boolean);
-type TResolver<T, K> = (payload: T) => K;
+type TResolver<T, S, K> = (payload: T, other?: S) => K;
 
-export class MatchManager<T extends any, K> {
-  #flagID = 0;
+export class MatchManager<T extends any, S, K> {
+  private flagID = 0;
 
-  #defaultValue: K = undefined;
+  private defaultValue: K | undefined = undefined;
 
-  #matcher: {
+  private matcher: {
     id: number;
     matcher: TMatcher<T>;
-    resolver: TResolver<T, K>;
+    resolver: TResolver<T, S, K>;
   }[] = [];
 
   constructor(defaultValue: K) {
-    this.#defaultValue = defaultValue;
+    this.defaultValue = defaultValue;
   }
 
   add(
     matcher: TMatcher<T>,
-    resolver: TResolver<T, K>
+    resolver: TResolver<T, S, K>
   ): number {
-    const matcherID = ++this.#flagID;
+    const matcherID = ++this.flagID;
 
-    this.#matcher.push({
+    this.matcher.push({
       id: matcherID,
       matcher,
       resolver
@@ -34,29 +34,29 @@ export class MatchManager<T extends any, K> {
     return matcherID;
   }
 
-  resolve(input: T): K {
-    for (let i = 0; i < this.#matcher.length; i++) {
+  resolve(input: T, payload?: S): K | undefined {
+    for (let i = 0; i < this.matcher.length; i++) {
       const {
         matcher,
         resolver
-      } = this.#matcher[i];
+      } = this.matcher[i];
 
       // 函数匹配
       if (typeof matcher === 'function') {
         if (matcher(input)) {
-          return resolver(input);
+          return resolver(input, payload);
         }
         continue;
       }
 
       // 引用或值匹配
       if (matcher === input) {
-        return resolver(input);
+        return resolver(input, payload);
       }
       continue;
     }
 
-    return this.#defaultValue;
+    return this.defaultValue;
   }
 }
 
