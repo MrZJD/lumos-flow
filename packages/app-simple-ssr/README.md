@@ -52,3 +52,12 @@ SSR Fallback: 检查没有dom节点时执行初始化render
 1. 组件系统
 2. 全局GlobalNotifier
 3. ....
+
+
+### UI编程演进
+
+1. 一阶段 绘图API
+2. 二阶段 DSL => HTML / CSS
+3. 现代阶段 DSL => JSX => HTML DOM
+
+* [JSX2DOM](https://github.com/cuzfinal/JSX2DOM/blob/master/src/element.ts)
