@@ -110,10 +110,11 @@ module.exports = {
     * [x-render](https://x-render.gitee.io/form-render/advanced/measure)
   * SSR
 * Test
-  * Stats.js测试页面渲染性能 https://github.com/mrdoob/stats.js
+  * [Stats.js](https://github.com/mrdoob/stats.js)测试页面渲染性能
 * BFF
 * FileSystem
   * [nodejs - fs-extra](https://www.npmjs.com/package/fs-extra)
+  * [nodejs - memfs](https://www.npmjs.com/package/memfs)
 * 图片处理
   * [gm](https://www.npmjs.com/package/gm)
   * [jimp](https://github.com/oliver-moran/jimp)
