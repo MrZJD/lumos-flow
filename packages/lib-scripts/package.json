@@ -9,8 +9,10 @@
     "ffmpeg": "^0.0.4"
   },
   "dependencies": {
+    "@types/pegjs": "^0.10.3",
     "gm": "^1.23.1",
     "jimp": "^0.16.1",
+    "pegjs": "^0.10.0",
     "shelljs": "^0.8.5"
   }
 }

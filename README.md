@@ -109,6 +109,8 @@ module.exports = {
     * [formily](https://formilyjs.org/)
     * [x-render](https://x-render.gitee.io/form-render/advanced/measure)
   * SSR
+  * Solution解决方案
+    * [next.js](https://nextjs.org/)
 * Test
   * [Stats.js](https://github.com/mrdoob/stats.js)测试页面渲染性能
 * BFF
@@ -143,3 +145,5 @@ module.exports = {
 * Devtool
   * [[WIP]whistle使用指南](./packages/doc/articles/tools/whistle_handbook.md)
   * [WIP]mermaid快速画图-设计文档
+* Others
+  * [PEG.js](https://pegjs.org/documentation)
