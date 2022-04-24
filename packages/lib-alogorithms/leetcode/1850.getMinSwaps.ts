@@ -1,6 +1,42 @@
 import { benchmark } from "../benchmark";
-import bubbleSort from "../sort/bubbleSort";
-import insertSort from "../sort/insertSort";
+
+export default function countingSort(source: string[], mode: 'asc' | 'desc'): string {
+  let result = '';
+  const counting: number[] = [];
+
+  source.forEach(i => {
+    const n = Number(i);
+    if (counting[n]) {
+      counting[n]++ 
+    } else {
+      counting[n] = 1;
+    }
+  });
+
+  if (mode === 'desc') {
+    for (let i = counting.length - 1; i >= 0; i--) {
+      if (!counting[i]) {
+        continue;
+      }
+
+      for (let j = 0; j < counting[i]; j++) {
+        result += i;
+      }
+    }
+  } else {
+    for (let i = 0, len = counting.length; i < len; i++) {
+      if (!counting[i]) {
+        continue;
+      }
+
+      for (let j = 0; j < counting[i]; j++) {
+        result += i;
+      }
+    }
+  }
+
+  return result;
+};
 
 /**
  * 邻位交换的最小次数
@@ -34,20 +70,16 @@ const swapCount = (a: string, b: string): number => {
 
 // leetcode.31 next_permutation
 // k为第k个
-function nextPermutation(nums: string[]): void {
+function nextPermutation(nums: string[], step: number): void {
   // 右侧排序最小值(冒泡)
   // 冒泡耗时比较高，可以优化
   const sort = (start: number) => {
-    // console.log(nums.join(''), start);
-
-    const sorted = insertSort(
+    const result = countingSort(
       nums.slice(start),
-      (a, b) => (a as unknown as number) - (b as unknown as number)
+      'asc'
     );
 
-    nums.splice(start, nums.length - start, ...sorted);
-
-    // console.log(nums.join(''));
+    nums.splice(start, nums.length - start, result);
   }
 
   let si = nums.length - 1;
@@ -88,12 +120,12 @@ function getMinSwaps(num: string, k: number): number {
 
   const next = num.split('');
 
-  benchmark('nextPermutation', () => {
-    for (let i = 0; i < k; i++) {
-      nextPermutation(next);
-      // console.log('next --->', next.join(''));
-    }
-  }, 1);
+  // benchmark('nextPermutation', () => {
+  //   for (let i = 0; i < k; i++) {
+  //     nextPermutation(next, k);
+  //     // console.log('next --->', next.join(''));
+  //   }
+  // }, 1);
 
   const target = next.join('');
   // console.log('num', num);
@@ -114,9 +146,7 @@ function getMinSwaps(num: string, k: number): number {
     break;
   }
 
-  const result = benchmark('swapCount', () => swapCount(num.slice(i, j + 1), target.slice(i, j + 1)), 1);
-
-  return result;
+  return swapCount(num.slice(i, j + 1), target.slice(i, j + 1));
 };
 
 // console.log(getMinSwaps('5489355142', 1) === '5489355214'); // 142 => 241 => 214
@@ -136,3 +166,5 @@ console.log(
     983
   )
 );
+
+// 耗时待优化 -> nextPermutation 一个一个找过于耗时
