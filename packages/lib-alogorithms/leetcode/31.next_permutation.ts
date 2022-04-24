@@ -4,7 +4,7 @@
  * * 寻找下一个排列
  */
 function nextPermutation(nums: number[]): void {
-  // 右侧排序最小值
+  // 右侧排序最小值(冒泡)
   const sort = (start: number) => {
     const len = nums.length;
     const loop = len - start - 1;
@@ -22,9 +22,11 @@ function nextPermutation(nums: number[]): void {
   let si = nums.length - 1;
   let st = -1;
 
+  // 从后向前扫描
   for (let i = nums.length - 1; i > 0; i--) {
     const current = nums[i];
 
+    // 从前向后扫描，是否有最靠近的值小于当前值
     for (let j = 0; j < i; j++) {
       if (nums[j] < current && j > st) {
         si = i;
