@@ -1,7 +1,9 @@
-import { benchmark } from "../benchmark";
+import { assertEqual, benchmark } from "../benchmark";
+import quickSort from '../sort/quickSort';
+import bubbleSort from '../sort/bubbleSort';
 
-export default function countingSort(source: string[], mode: 'asc' | 'desc'): string {
-  let result = '';
+function countingSort(source: string[], mode: 'asc' | 'desc'): string[] {
+  const result: string[] = [];
   const counting: number[] = [];
 
   source.forEach(i => {
@@ -20,7 +22,7 @@ export default function countingSort(source: string[], mode: 'asc' | 'desc'): st
       }
 
       for (let j = 0; j < counting[i]; j++) {
-        result += i;
+        result.push(`${i}`);
       }
     }
   } else {
@@ -30,7 +32,7 @@ export default function countingSort(source: string[], mode: 'asc' | 'desc'): st
       }
 
       for (let j = 0; j < counting[i]; j++) {
-        result += i;
+        result.push(`${i}`);
       }
     }
   }
@@ -57,20 +59,22 @@ const swapCount = (a: string, b: string): number => {
   }
 
   const firstB = b[i];
-  const index = a.split('').slice(i).findIndex(t => t === firstB);
+  const ta = a.split('').slice(i);
+  const index = ta.findIndex(t => t === firstB);
 
   if (index === -1) {
     return 0;
   }
 
-  const result = firstB + a.slice(i, index) + a.slice(index + 1);
+  const begin = i + index;
+  const result = a.slice(0, i) + firstB + a.slice(i, begin) + a.slice(begin + 1);
 
   return index + swapCount(result.slice(i + 1), b.slice(i + 1));
 };
 
 // leetcode.31 next_permutation
 // k为第k个
-function nextPermutation(nums: string[], step: number): void {
+function nextPermutation(nums: string[]): void {
   // 右侧排序最小值(冒泡)
   // 冒泡耗时比较高，可以优化
   const sort = (start: number) => {
@@ -79,15 +83,26 @@ function nextPermutation(nums: string[], step: number): void {
       'asc'
     );
 
-    nums.splice(start, nums.length - start, result);
+    nums.splice(start, nums.length - start, ...result);
+
+    // bubble sort
+    // const next = nums.slice(start);
+    // const result = bubbleSort(next, (a: string, b: string) => Number(a) - Number(b));
+    // nums.splice(start, next.length, ...result);
   }
 
   let si = nums.length - 1;
   let st = -1;
 
   // 从后向前扫描
+  // 先找到一个最大数
   for (let i = nums.length - 1; i > 0; i--) {
     const current = nums[i];
+
+    // 优化点1. 如果相邻的两个数相等，则直接进入一下轮，避免重复无效扫描找
+    if (nums[i - 1] === current) {
+      continue;
+    }
 
     // 从后向前扫描，选择最靠近i && 小于当前数的值
     for (let j = i - 1; j >= 0; j--) {
@@ -120,16 +135,11 @@ function getMinSwaps(num: string, k: number): number {
 
   const next = num.split('');
 
-  // benchmark('nextPermutation', () => {
-  //   for (let i = 0; i < k; i++) {
-  //     nextPermutation(next, k);
-  //     // console.log('next --->', next.join(''));
-  //   }
-  // }, 1);
+  for (let i = 0; i < k; i++) {
+    nextPermutation(next);
+  }
 
   const target = next.join('');
-  // console.log('num', num);
-  // console.log('target', target);
 
   // 从原始字符串到目标字符串需要swap的步数
   let i = 0, j = num.length;
@@ -146,25 +156,28 @@ function getMinSwaps(num: string, k: number): number {
     break;
   }
 
+  // console.log('target', num, '->', target);
+
   return swapCount(num.slice(i, j + 1), target.slice(i, j + 1));
 };
 
-// console.log(getMinSwaps('5489355142', 1) === '5489355214'); // 142 => 241 => 214
-// console.log(getMinSwaps('5489355142', 2) === '5489355241');
-// console.log(getMinSwaps('5489355142', 3) === '5489355412');
-// console.log(getMinSwaps('5489355142', 4) === '5489355421');
-// 5489355142
-// 5489355421
-// console.log(getMinSwaps('5489355142', 4) === 2); // 142 => 241 => 214
-// console.log(getMinSwaps('11112', 4) === 4);
-// console.log(getMinSwaps('00123', 1) === 1);
-// console.log(getMinSwaps("059", 5) === 3); // 059 -> 095 | 509 | 590 | 905 | 950
+// 788785540
 
-console.log(
-  getMinSwaps(
-    "555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555556",
+// 845787508
+
+if (require.main === module) {
+  assertEqual(getMinSwaps('5489355142', 4), 0);
+  assertEqual(getMinSwaps('11112', 4), 4);
+  assertEqual(getMinSwaps('00123', 1), 1);
+  assertEqual(getMinSwaps('059', 5), 3);
+
+  assertEqual(
+    getMinSwaps('788785540', 891),
+    13
+  );
+
+  assertEqual(
+    getMinSwaps('555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555556', 983),
     983
-  )
-);
-
-// 耗时待优化 -> nextPermutation 一个一个找过于耗时
+  );
+}

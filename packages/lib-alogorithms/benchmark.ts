@@ -1,19 +1,35 @@
+import chalk from 'chalk';
+import ora from 'ora';
+
+const format = {
+  success: (info: string) => chalk.bgGreen(chalk.black(info)),
+  warning: (info: string) => chalk.bgYellow(chalk.black(info)),
+  error: (info: string) => chalk.bgRed(chalk.black(info)),
+  info: (label: string) => chalk.bgBlue(chalk.black(label)),
+};
 
 export const benchmark = ((label: string, fn: () => any, times: number = 10) => {
   const timer = [];
+  const spinner = ora('running...');
+
+  console.log('');
+  console.log(format.info(' Benchmark '), chalk.cyan(label));
+
+  spinner.start();
 
   // 多次运行求平均值
   for (let i = 0; i < times; i++) {
     const s = Date.now();
 
+    spinner.text = `running... ${i + 1} of ${times}`;
+    spinner.render();
     const result = fn();
 
     timer.push(Date.now() - s);
 
     if (times - i === 1) {
+      spinner.stop();
       const avg = (timer.reduce((p, i) => p + i, 0) / timer.length).toFixed(2);
-      console.log('');
-      console.log('Benchmark:', label);
       console.log('------------------------------------');
       console.log('Run Times:', times);
       console.log('Avg Cost time:', avg, 'ms');
@@ -69,11 +85,10 @@ export const assertEqual = (a: any, b: any) => {
   const equal = isEqual(a, b);
 
   if (!equal) {
-    console.log('Assert Fail: **************');
-    console.log('Ouput: ', a);
-    console.log('Except:', b);
-    console.log('Assert Fail: **************');
+    console.log(chalk.red('x'), format.error('Assert Fail'));
+    console.log('  -', chalk.cyan('Ouput'), a);
+    console.log('  -', chalk.cyan('Except'), b);
   } else {
-    console.info('Accept:', a);
+    console.info(chalk.green('√'), chalk.green('Accept'), a);
   }
 };
