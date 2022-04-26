@@ -61,3 +61,38 @@ SSR Fallback: 检查没有dom节点时执行初始化render
 3. 现代阶段 DSL => JSX => HTML DOM
 
 * [JSX2DOM](https://github.com/cuzfinal/JSX2DOM/blob/master/src/element.ts)
+
+## 思路
+
+## 我们为什么需要SSR
+
+> 从浏览器输入URL到页面展示 经历了哪些阶段
+
+1. 更快的触达用户展示
+2. 更好的搜索引擎&网络爬虫的理解
+3. 更快速的页面性能
+
+## 目标
+
+1. 用户首屏 去除网络因素后 TTI < 1s
+
+## SSG对比SSR
+
+1. 不需要全量应用SSR，只需要将首屏关键数据渲染。
+
+## 架构设计
+
+1. APP级别注入数据
+2. Page级别注入数据
+
+1. 构建模版时注入
+  - 优点：不需要每次请求注入数据
+2. 运行时注入
+  - 优点：动态性好
+3. ISR: incremental-static-regeneration
+  - 综合1/2，设置过期时间/webhooks动态打包
+4. 服务渲染组件(Server Components)
+  - [next.js](https://nextjs.org/docs/advanced-features/react-18/server-components)
+
+
+## 适配器 React
