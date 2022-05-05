@@ -1,0 +1,5 @@
+
+message MyPeople {
+  int32 id = 1;
+  string name = 2;
+}
