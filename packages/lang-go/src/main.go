@@ -9,5 +9,10 @@ import (
 func main() {
 	lesson.Hello()
 
-	fmt.Print("Sqrt 2", lesson.Sqrt(2))
+	fmt.Println("Sqrt 2", lesson.Sqrt(2))
+
+	lesson.MyPointer()
+
+	lesson.HelloStruct()
+	lesson.HelloArr()
 }
