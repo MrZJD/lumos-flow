@@ -112,6 +112,11 @@ module.exports = {
   * SSR
   * Solution解决方案
     * [next.js](https://nextjs.org/)
+  * FrameWork
+    * [React]()
+    * [Vue]()
+    * [Lit for WebComponent](https://lit.dev/)
+    * [svelte](https://svelte.dev/tutorial/basics)
 * Test
   * [Stats.js](https://github.com/mrdoob/stats.js)测试页面渲染性能
 * BFF
@@ -148,3 +153,5 @@ module.exports = {
   * [WIP]mermaid快速画图-设计文档
 * Others
   * [PEG.js](https://pegjs.org/documentation)
+* Alogrithm
+  * [匈牙利算法 - 解决分配问题](https://zh.wikipedia.org/wiki/%E5%8C%88%E7%89%99%E5%88%A9%E7%AE%97%E6%B3%95)

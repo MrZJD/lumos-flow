@@ -7,3 +7,5 @@
 5. 树表查找
 6. 分块查找
 7. 哈希查找
+
+https://xie.infoq.cn/article/996cf8899930ae467cc790035
