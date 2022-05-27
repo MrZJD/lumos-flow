@@ -45,4 +45,22 @@ func HelloArr() {
 	s5 = s5[:5] // 扩充到5,但是不能超出原长度
 
 	fmt.Printf("len=%d cap=%d %v\n", len(s5), cap(s5), s5)
+
+	fmt.Println("|-------- make slice 动态切片 --------|")
+
+	ma := make([]int, 5) // type, len, cap
+	mb := make([]int, 0, 5)
+	fmt.Println("make ma", ma)
+	fmt.Println("make mb", mb)
+
+	// --->
+	ma = append(ma, 1)
+	fmt.Println("make ma after append", ma)
+
+	// ---> range
+	for i, v := range ma {
+		// for _, v := range ma { // ignore _
+		// for i := range ma { // ignore v
+		fmt.Println("loop", i, "value", v)
+	}
 }

@@ -1,5 +1,7 @@
 #!/usr/bin/env zx
 
+// require node >= 16
+
 await $`cat package.json | grep name`
 
 await Promise.all([

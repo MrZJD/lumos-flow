@@ -15,4 +15,15 @@ func main() {
 
 	lesson.HelloStruct()
 	lesson.HelloArr()
+	lesson.HelloMap()
+
+	fmt.Println(lesson.WordCount("hello world of golang"))
+
+	lesson.HelloFunc()
+	lesson.HelloFib()
+	lesson.HelloMethod()
+	lesson.HelloType()
+	lesson.HelloErr()
+	lesson.HelloIO()
+	lesson.HelloGoRoutine()
 }
