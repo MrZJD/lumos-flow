@@ -27,6 +27,7 @@ func main() {
 	// train.HelloTree()
 	// train.HelloCrawler()
 	train.HelloReflect()
+	// train.HelloReflectSeq()
 
 	// xweb.HelloWeb()
 	// xweb.PostFile("/Users/bytedance/Documents/movie.png", "http://127.0.0.1:9098/upload")
