@@ -1,6 +1,7 @@
 package xweb
 
 import (
+	"encoding/json"
 	"fmt"
 	"log"
 	"net/http"
@@ -18,4 +19,28 @@ func HelloWeb() {
 	if err != nil {
 		log.Fatal("Listen and Serve:", err)
 	}
+}
+
+func HelloXGin() {
+	xg := NewXGin(9019)
+
+	xg.Get("/hello", func(w http.ResponseWriter, r *http.Request) {
+		type HelloData struct {
+			List []int `json:"list"`
+		}
+
+		res := &XGinResponseBase{
+			Code:    0,
+			Message: "ok",
+			Data: HelloData{
+				List: []int{1, 2, 3, 4},
+			},
+		}
+
+		resText, _ := json.Marshal(res)
+
+		w.Write(resText)
+	})
+
+	xg.Serve()
 }
