@@ -1,7 +1,5 @@
 package main
 
-import "github.com/MrZJD/lang_go/src/xweb"
-
 func main() {
 	// lesson.Hello()
 
@@ -28,7 +26,8 @@ func main() {
 	// train.HelloCrawler()
 	// train.HelloReflect()
 	// train.HelloReflectSeq()
+	// train.HelloABC()
 
-	xweb.HelloXGin()
+	// xweb.HelloXGin()
 	// xweb.PostFile("/Users/bytedance/Documents/movie.png", "http://127.0.0.1:9098/upload")
 }
