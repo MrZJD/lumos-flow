@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <title>Applink</title>
+</head>
+<body>
+  <h1>功能点：判断手机是否安装某个applink</h1>
+  <p>
+    <label>是否安装了</label>
+    <span id="installed">-1</span>
+    <a id="applink" href="applink">schema</a>
+  </p>
+  <script src="https://unpkg.com/vconsole@latest/dist/vconsole.min.js"></script>
+  <script src="https://unpkg.com/callapp-lib@3.1.2/dist/index.umd.js"></script>
+  <script>
+    // VConsole will be exported to `window.VConsole` by default.
+    var vConsole = new window.VConsole();
+  </script>
+  <script src="./main.js?v=1234"></script>
+</body>
+</html>
