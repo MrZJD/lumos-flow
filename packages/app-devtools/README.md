@@ -55,3 +55,5 @@ autoninja -C out/Default
 ## 参考
 
 * [devtools-backend](https://github.com/christian-bromann/devtools-backend)
+
+http://127.0.0.1:8080/gen/front_end/inspector.html?ws=127.0.0.1:9009/devtools

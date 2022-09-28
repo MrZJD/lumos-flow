@@ -1,5 +1,7 @@
 package main
 
+import "fmt"
+
 func main() {
 	// lesson.Hello()
 
@@ -30,4 +32,17 @@ func main() {
 
 	// xweb.HelloXGin()
 	// xweb.PostFile("/Users/bytedance/Documents/movie.png", "http://127.0.0.1:9098/upload")
+
+	var a interface{}
+	var b interface{}
+
+	var num = 10
+	var numb = 0
+
+	a = num
+	b = numb
+
+	fmt.Printf("value of: %v", a == b)
+	// fmt.Printf("value of: %s", b)
+	// fmt.Printf("value of: %s", b)
 }

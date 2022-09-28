@@ -9,12 +9,17 @@ const entry = {
     e: 'examples/2_proto_message/parser.pegjs',
     t: 'examples/2_proto_message/target.proto',
     r: 'examples/2_proto_message/result.d.ts',
+  },
+  '3': {
+    e: 'examples/3_thrift/parser.pegjs',
+    t: 'examples/3_thrift/service.thrift',
+    r: 'examples/3_thrift/result.d.ts',
   }
 };
 
-const eFile = path.resolve(__dirname, entry[2].e);
-const tFile = path.resolve(__dirname, entry[2].t);
-const rFile = path.resolve(__dirname, entry[2].r);
+const eFile = path.resolve(__dirname, entry[3].e);
+const tFile = path.resolve(__dirname, entry[3].t);
+const rFile = path.resolve(__dirname, entry[3].r);
 
 const expression = fs.readFileSync(eFile).toString();
 const origin = fs.readFileSync(tFile).toString();

@@ -70,6 +70,17 @@ module.exports = {
               "nodeValue": "测试文本",
               "childNodeCount": 0,
               "attributes": [],
+            },
+            {
+              "nodeId": 7,
+              "parentId": 6,
+              "backendNodeId": 1903,
+              "nodeType": 3,
+              "nodeName": "",
+              "localName": "",
+              "nodeValue": "测试文本2",
+              "childNodeCount": 0,
+              "attributes": [],
             }
           ]
         }
