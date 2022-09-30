@@ -1,0 +1,27 @@
+# Work Free
+
+## 平台调研
+
+* [程序员客栈](https://proginn.com)
+* [码市](https://codemart.com)
+* [开源众包](https://zb.oschina.net)
+* [智城外包](https://taskcity.com)
+* [实现](https://shixian.com)
+* [猿急送](https://yuanjisong.com)
+* [人人开发](https://rrkf.com)
+* [开发邦](https://kaifabang.com)
+* [电鸭](https://eleduck.com)
+* [快码](https://kuai.ma)
+* [英选](https://yingxuan.io)
+* [外包大师](https://waibaodashi.com)
+* [我爱方案](https://52solution.com)
+* [智筹](https://zhichou.com)
+* [自由职客](https://freekeer.com)
+* [解放号](https://jfh.com)
+* [Sxsoft](https://sxsoft.com)
+* [猪八戒](https://zbj.com)
+* [3cwork](https://3cwork.com)
+* [weike](https://weike.taobao.com)
+* [weike](https://epwk.com)
+* [yespmp](https://yespmp.com)
+* [码易](https://mayigeek.com)
